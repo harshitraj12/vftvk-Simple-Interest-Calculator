@@ -8,9 +8,10 @@
         <div class='maindiv'>
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years  <select id="years">
+        Amount <input type="number"  id="principal" onchange="validateAmount()">  <br/>
+        Rate <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25" onchange="getSliderValue()"><span id="rateSpan">10.50%</span>  <br/>
+        No. of Years  
+        <select name="years" id="years">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -21,21 +22,12 @@
             <option value="8">8</option>
             <option value="9">9</option>
             <option value="10">10</option>
-        </select> <br/>
-        Interest : <span id="result"><input type="range"  id="rate" min="1" max="20" value="10.25" step="0.25"></span><br>
-        <span id="rate_val">
-            10.25%
-        </span>
-        <button onclick="compute()">Compute Interest</button>
-        <span id="result">
+          </select><br/>
 
-        </span>
-        <footer>
-
-            &#169; This Calculator belongs to Harshit Raj
-    
-    
-    </footer>
+        <button onclick="compute()">Compute Interest</button><br/>
+        <span id="result"></span><br>
+        <span id="result"></span>
+        <footer>&#169; Harshit Raj</footer>
         </div>
     </body>
 </html>
